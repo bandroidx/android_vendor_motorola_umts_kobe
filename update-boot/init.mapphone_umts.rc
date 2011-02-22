@@ -65,7 +65,7 @@ on init
 
 # Mount preinstall partition
     mkdir /preinstall 0771 system system
-    exec /system/bin/logwrapper /system/bin/mount_ext3.sh preinstall /preinstall
+   # exec /system/bin/logwrapper /system/bin/mount_ext3.sh preinstall /preinstall
     chmod 0771 /preinstall
     chown system system /preinstall
 
