@@ -235,7 +235,7 @@ int main(int argc, char ** argv) {
 
 			return result;
 		}
-
+       }
 		char real_executable[PATH_MAX];
 		sprintf(real_executable, "%s.bin", hijacked_executable);
 		char ** argp = (char **)malloc(sizeof(char *) * (argc + 1));
@@ -254,7 +254,7 @@ int main(int argc, char ** argv) {
 		// should clean up memory leaks, but it really doesn't matter since the process immediately exits.
 		result = exec_and_wait(argp);
 		hijack_log("    returned: %d", result);
-	}
+	
 		return result;
 }
 
